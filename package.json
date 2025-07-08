@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "homepage": "https://abhiishhekk.github.io/Portfolio-Web/",
-  
   "private": true,
   "version": "0.0.0",
   "type": "module",
