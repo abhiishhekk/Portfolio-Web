@@ -9,6 +9,10 @@ import EmailCard from './components/EmailCard';
 import Typewriter from './components/TypeWriter';
 import Page22 from './components/Page22';
 import { div } from 'motion/react-client';
+import great from './images/great.jpg'
+import myphotoback from './images/myphotoback.jpeg'
+import tech from './images/tech.jpeg'
+import myphoto2 from './images/myphoto2.jpeg'
 function App() {
   const [firstDone, setFirstDone] = useState(false);
   const [helloText, setHelloText] = useState("");
@@ -47,14 +51,14 @@ function App() {
           
             <div className="images md:flex hidden">
               <div className="photo" id="img1">
-                <img src="src/images/great.jpg" alt="img1" />
+                <img src={great} alt="img1" />
               </div>
               <div className="photo" id="img2">
-                <img src="src/images/myphoto2.jpeg" alt="img2" />
+                <img src={myphoto2} alt="img2" />
               </div>
               <div className="photo" id="img3-4">
-                <img src="src/images/tech.jpeg" alt="img3" id="img3" />
-                <img src="src/images/myphotoback.jpeg" alt="img4" id="img4" />
+                <img src={tech} alt="img3" id="img3" />
+                <img src={myphotoback} alt="img4" id="img4" />
               </div>
             </div>
           
