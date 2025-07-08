@@ -49,7 +49,7 @@ function ProjectCardParallax({i, id, title, image, bgCol, link,  description ,pr
 
 
               <div className=' self-end mt-5'>
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className='arrowUsed border-2 rounded-3xl p-1 pr-3.5 pl-2 self-end flex '>
+              <a href={link} target="_blank" rel="noopener noreferrer" className='arrowUsed border-2 rounded-3xl p-1 pr-3.5 pl-2 self-end flex '>
                   Take a look...
                   <span className='material-symbols-outlined flex items-center justify-center'>
                      arrow_right_alt
