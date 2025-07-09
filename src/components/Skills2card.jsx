@@ -25,7 +25,7 @@ function Skills2card({i, id, skillType, bgCol ,progress, range, targetScale}) {
     const programmerSkills = [
             {icon: cplusLogo, title:'C++', level:'Intermediate'},
             {icon: cLogo, title:'C', level:'Intermediate'},
-            {icon: dsaLogo, title:'Vite', level:'Intermediate'}
+            {icon: dsaLogo, title:'DSA', level:'Intermediate'}
     ]
   
   const container = useRef(null);
