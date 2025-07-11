@@ -1,11 +1,13 @@
 import React from 'react'
 import {motion} from 'motion/react'
-
+import { useSelector } from 'react-redux'
 function EducationCard({heading, line2, duration}) {
+    const theme = useSelector(state => state.theme.theme);
   return (
-    <motion.div className='flex flex-col m-3 gap-2 '
+    <motion.div className='flex flex-col m-3 gap-2'
       whileHover={{
-        scale:1.04
+        scale:1.04,
+
       }}
       transition={{ type: "spring", stiffness: 250 }}
     >

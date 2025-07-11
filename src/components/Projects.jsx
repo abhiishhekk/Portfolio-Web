@@ -21,7 +21,12 @@ function Projects() {
   return (
     <div ref={container} className='projects mt-20'>
 
-        <div id='projects' className='-scroll-mt-28 projects-text reveal-bottom justify-self-center '>Projects</div>
+        <motion.div id='projects' className='-scroll-mt-28 projects-text justify-self-center '
+            initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
+                whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
+                transition={{ duration:0.6, ease: "linear" }}
+                viewport={{ once: true, amount: 0.2 }}
+        >Projects</motion.div>
         <div className='relative'>
             {projects.map((proj, i) => {
                 const targetScale = 1 - ((projects.length - i) * 0.05);

@@ -11,11 +11,12 @@ import gitLogo from '../assets/gitLogo.png'
 import cplusLogo from '../assets/cplusLogo.png'
 import dsaLogo from '../assets/dsaLogo.png'
 import {motion} from 'motion/react'
-
+import { useSelector } from 'react-redux';
 function Page2() {
-    useScrollReveal('.reveal-right', { origin: 'left' });
-    useScrollReveal('.reveal-left', { origin: 'right' });
-    useScrollReveal('.reveal-bottom', { origin: 'bottom' });
+    const theme = useSelector(state => state.theme.theme);
+    useScrollReveal('.reveal-right', { origin: 'left' }, [theme]);
+    useScrollReveal('.reveal-left', { origin: 'right' }, [theme]);
+    useScrollReveal('.reveal-bottom', { origin: 'bottom' }, [theme]);
 
     const developerSkills = [
         {icon: htmlLogo, title:'HTML', level:'Intermediate'},
@@ -34,10 +35,13 @@ function Page2() {
     ]
         
   return (
-    <div id='skills' className='relative pt-30 pb-64'>
+    <div id='skills' className='relative pt-30 pb-64 min-w-full'>
         <div  className='skills-text justify-self-center '>Skills</div>
-        <motion.div className='reveal-bottom skills-logo-box grid md:grid-cols-2 grid-cols-1  md:gap-8 p-4  md:mr-[12rem] md:ml-[12rem]  rounded-4xl'
-            
+        <motion.div className='skills-logo-box grid md:grid-cols-2 grid-cols-1  md:gap-8 p-4  md:mr-[12rem] md:ml-[12rem]  rounded-4xl'
+                initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
+                whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
+                transition={{ duration:0.6, ease: "linear" }}
+                viewport={{ once: true, amount: 0.2 }}
         >
             {/* <div>Developer Skills</div> */}
             <motion.div className='reveal-bottom grid grid-cols-3 grid-rows-2 gap-y-16 bg-[#7CFC00] p-6 rounded-4xl'

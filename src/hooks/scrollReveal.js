@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import ScrollReveal from 'scrollreveal';
 
-const useScrollReveal = (selector, config = {}) => {
+const useScrollReveal = (selector, config = {}, deps = []) => {
 
   useEffect(() => {
     const sr = ScrollReveal();
@@ -15,7 +15,7 @@ const useScrollReveal = (selector, config = {}) => {
       once:true,
       ...config,
     });
-  }, [selector, config]);
+  }, [selector, config, ...deps,]);
 };
 
 export default useScrollReveal;

@@ -2,8 +2,9 @@ import React from 'react'
 
 import {motion, AnimatePresence} from 'motion/react'
 import { div } from 'motion/react-client';
-
+import { useSelector } from 'react-redux';
 function EmailSent({show}) {
+  const theme = useSelector(state => state.theme.theme);
   return (
     <div className='md:absolute z-20 w-[10rem]'>
         <AnimatePresence>

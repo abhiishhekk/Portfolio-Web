@@ -1,6 +1,7 @@
 import React, {useRef} from 'react'
 import Skills2card from './Skills2card';
 
+
 import {motion, useScroll} from 'motion/react'
 function Page22() {
 
@@ -17,7 +18,12 @@ function Page22() {
   return (
     <div ref={container} className='projects mt-20'>
 
-        <div id='skills' className='-scroll-mt-30 projects-text reveal-bottom justify-self-center '>SKills</div>
+        <motion.div id='skills' className='-scroll-mt-30 projects-text justify-self-center'
+            initial={{ opacity: 0, x: -100, y: 0 }}       
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}   
+                  transition={{ duration:0.6, ease: "easeInOut" }}
+                  viewport={{ once: true, amount: 0.2 }}
+        >SKills</motion.div>
         <div className='relative' >
             {skills.map((proj, i) => {
                 const targetScale = 1 - ((skills.length - i) * 0.05);
