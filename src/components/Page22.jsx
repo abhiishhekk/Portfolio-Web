@@ -23,8 +23,8 @@ function Page22() {
                   whileInView={{ opacity: 1, x: 0, y: 0 }}   
                   transition={{ duration:0.6, ease: "easeInOut" }}
                   viewport={{ once: true, amount: 0.2 }}
-        >SKills</motion.div>
-        <div className='relative' >
+        >Skills</motion.div>
+        <div className='relative'>
             {skills.map((proj, i) => {
                 const targetScale = 1 - ((skills.length - i) * 0.05);
                 return (<Skills2card key={proj.id} i={i} {...proj} progress={scrollYProgress} range={[i*0.25, 1]} targetScale={targetScale}/>)

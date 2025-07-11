@@ -158,7 +158,7 @@ html, body{
 }
 .head{
     /* margin-top: 10svh; */
-    padding-top: 10svh;
+    padding-top: 0svh;
     height: 100svh;
     width:100%;
     /* position: relative; */
@@ -174,12 +174,13 @@ html, body{
     gap:1rem;
 }
 .main_page{
+    height: screen;
     padding-left: 2%;
     padding-right: 2%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    row-gap: 1svh;
+    grid-template-rows: 1fr 1fr 1fr;
+    /* row-gap: 1svh; */
     /* width: 50svw; */
 }
 #intro, #name, #intro_description,#resume,#developer,#social_icons{
@@ -187,6 +188,7 @@ html, body{
     grid-column-end: 2;
 }
 #developer{
+    /* box-sizing:fit-content; */
     display:flex;
     align-items: flex-end;
     margin-left: 0.5svh;
@@ -196,8 +198,8 @@ html, body{
     height:fit-content;
     border:1px solid black;
     border-radius:5svh;
-    padding-left: 4%;
-    padding-right:1%;
+    padding-left: 10%;
+    padding-right:3%;
 }
 .dark #border_for_developer{
     border: 1px solid #864ab2;
@@ -240,9 +242,6 @@ html, body{
     font-weight: 600;
     opacity: 0;
     align-self:flex-start;
-}
-#intro{
-    align-self:flex-end;
 }
 #name{
     align-self:flex-start;

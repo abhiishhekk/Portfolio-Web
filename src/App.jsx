@@ -36,6 +36,7 @@ function App() {
           <motion.div className="main_page"
             
           >
+            <div className='flex flex-col justify-end items-start'>
             <motion.div id="developer"
               initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
@@ -55,13 +56,14 @@ function App() {
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
               transition={{ duration:0.6, ease: "linear" }}
               viewport={{ once: true, amount: 0.2 }}       // only once, 20% visible
-            > Hello I'm</motion.div>
+            > Hello I'm</motion.div> </div>
             <motion.div id='intro' className='lg::text-[12svh] text-[9svh]'
               initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
               transition={{ duration:0.9, ease: "linear" }}
               viewport={{ once: true, amount: 0.2 }}       // only once, 20% visible
             > Abhishek Kumar</motion.div>
+            <div className='flex flex-col gap-2'>
             <motion.div id="intro_description" className='font-serif'
               initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
@@ -81,7 +83,7 @@ function App() {
                 </a>
               </div>
             </div>
-            
+            </div>
           </motion.div>
           
             <div id='images' className=" xl:flex hidden xl:dark:bg-[#212020]">
