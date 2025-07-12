@@ -15,9 +15,9 @@ function SkillsCard({icon, title, level}) {
         <div className='font-medium font-serif'>
             {title}
         </div>
-        <div className='text-sm text-gray-500'>
+        {/* <div className='text-sm text-gray-500'>
             {level}
-        </div>
+        </div> */}
     </motion.div>
   )
 }

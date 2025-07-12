@@ -11,8 +11,8 @@ function Page3() {
     useScrollReveal('.reveal-left', { origin: 'right' }, [theme]);
     useScrollReveal('.reveal-bottom', { origin: 'bottom' }, [theme]);
   const edCards = [
-    {heading: "B.Tech in Computer Science", line2:"Motilal Nehru National Institute of Technology Allahabad, Prayagraj", duration:"(2023-2027)"},
-    {heading: "Senior Secondary", line2:"Nardiganj College, Nardiganj", duration:"(2022-2023)"},
+    {heading: "B.Tech in Computer Science", line2:"Motilal Nehru National Institute of Technology Allahabad, Prayagraj", duration:"2023-2027"},
+    {heading: "Senior Secondary", line2:"Nardiganj College, Nardiganj", duration:"2022-2023"},
     {heading: "Matriculation", line2:"Gyan Bharti Model Residential Complex, Dhanwan, Hisua", duration:"2020"},
   ]
   return (
