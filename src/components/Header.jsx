@@ -11,7 +11,7 @@ function Header() {
   const ref = useRef(null);
     const {scrollY, scrollYProgress} = useScroll({target:ref, offset: ["start end", "end start"]});
     const opacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
-    const opacity2 = useTransform(scrollYProgress, [0, 1], [1, 0]);
+    const opacity2 = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
     const scale = useTransform(scrollYProgress, [0.5, 1], [1, 0.5]);
     // const clip1 = useTransform(scrollYProgress, [0, 1], [0, 25]);
     // const clip2 = useTransform(scrollYProgress, [0, 1], [100, 75]);
