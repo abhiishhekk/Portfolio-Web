@@ -130,11 +130,11 @@ function EmailCard() {
         </motion.textarea>
         <motion.button
 
-            initial={{ opacity: 0, x: 0, y: 100 }}     // from bottom-right
+            initial={{ opacity: 0, x: 0, y: 0}}     // from bottom-right
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
               transition={{ 
-                y:{duration:0.6, ease: "linear", delay:0.5},
-                opacity:{duration:0.5, ease:"linear", delay:0.5},
+                // y:{duration:0.6, ease: "linear", delay:0.5},
+                opacity:{duration:0.5, ease:"linear", delay:1},
                 scale:{ type: "spring", stiffness: 250 }
             }}
             viewport={{ once: true, amount: 0.2 }} 

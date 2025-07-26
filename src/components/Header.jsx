@@ -1,5 +1,5 @@
 import React, {useRef} from 'react'
-import {motion, useScroll, useTransform} from 'motion/react'
+import {motion, useMotionTemplate, useScroll, useTransform} from 'motion/react'
 import '../../src/App.css'
 import great from '../images/great.jpg'
 import myphotoback from '../images/myphotoback.jpeg'
@@ -11,7 +11,19 @@ function Header() {
   const ref = useRef(null);
     const {scrollY, scrollYProgress} = useScroll({target:ref, offset: ["start end", "end start"]});
     const opacity = useTransform(scrollYProgress, [0.5, 1], [1, 0]);
+    const opacity2 = useTransform(scrollYProgress, [0, 1], [1, 0]);
     const scale = useTransform(scrollYProgress, [0.5, 1], [1, 0.5]);
+    // const clip1 = useTransform(scrollYProgress, [0, 1], [0, 25]);
+    // const clip2 = useTransform(scrollYProgress, [0, 1], [100, 75]);
+
+    const topMV    = useTransform(scrollYProgress, [0, 1], [0, 25]);
+const rightMV  = useTransform(scrollYProgress, [0, 1], [0, 25]);
+const bottomMV = useTransform(scrollYProgress, [0, 1], [0, 25]);
+const leftMV   = useTransform(scrollYProgress, [0, 1], [0, 25]);
+    const clipPath = useMotionTemplate`
+  inset(${topMV}% ${rightMV}% ${bottomMV}% ${leftMV}% round 8px)
+`;
+const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
   return (
 
     <motion.header ref={ref}  className="head w-svw lg:pr-20 lg:pl-20  h-[200svh]"
@@ -83,15 +95,16 @@ function Header() {
             </div>
           </motion.div>
           
-            <motion.div id='images' className=" xl:flex hidden xl:dark:bg-[#212020]"
+            <motion.div id='images' className=" xl:flex hidden xl:dark:bg-[#212020] mr-9"
               
             >
               <motion.div className="photo" id="img1"
                 
               >
                 <motion.img src={great} alt="img1" 
+                style={{opacity: opacity2, clipPath, scale: zoom}} 
                     initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
-                whileInView={{ opacity: [0, 1, 0.2, 1, 0, 2, 0.75, 0, 1, 0.25, 0.75], x: 0, y: 0 }}     // to original position
+                whileInView={{ opacity: [0, 1, 0.2, 1, 0, 1, 0.75, 0, 1, 0.25, 0.75], x: 0, y: 0 }}     // to original position
                 transition={{ 
                 x:{duration:1, ease: "anticipate", delay:1},
                 opacity:{duration:0.8, delay:1, ease:"anticipate", times: [0, 0.1, 0.25, 0.30, 0.39, 0.45, 0.59, 0.70, 0.85, 1]}
@@ -100,19 +113,20 @@ function Header() {
                 />
               </motion.div>
               <motion.div className="photo" id="img2"
-              
+                
               >
-              <motion.img src={myphoto2} alt="img2" 
+              <motion.img src={myphoto2} alt="img2"
+              style={{opacity: opacity2, clipPath, scale: zoom }} 
               initial={{ opacity: 0, x: 0, y: 100 }}       // from bottom-right
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
               transition={{ 
                 y:{duration:1.2, ease: "anticipate"},
                 opacity:{duration:0.8, delay:0.2, ease:"easeInOut"}
              }}
-              viewport={{ once: true, amount: 0.2 }}  
+              viewport={{ once: true, amount: 0.2 }}
               />
               </motion.div>
-              <div className="photo" id="img3-4">
+              {/* <div className="photo" id="img3-4">
                 <motion.img src={tech} alt="img3" id="img3"
                   initial={{ opacity: 0, x: 100, y: 0 }}       // from bottom-right
                   whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
@@ -132,7 +146,7 @@ function Header() {
                   }}
                   viewport={{ once: true, amount: 0.2 }}  
                 />
-              </div>
+              </div> */}
             </motion.div>
           
         </motion.div>

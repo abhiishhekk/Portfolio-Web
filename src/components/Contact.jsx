@@ -11,10 +11,10 @@ function Contact() {
     useScrollReveal('.reveal-bottom', { origin: 'bottom' }, [theme]);
 
   return (
-    <motion.div id='contact' className='h-dvh md:mt-0 mt-30 grid md:grid-cols-2 grid-cols-1 grid-rows-1 justify-self-center items-center gap-40'
+    <motion.div id='contact' className='h-dvh md:mt-0 mt-30 grid md:grid-cols-2 grid-cols-1 grid-rows-1 justify-self-center items-center gap-40 '
                 
     >
-        <motion.div className='flex md:h-[35rem] w-[22rem] h-[15rem]  md:w-[25rem] flex-col gap-20 justify-center items-center border-2 rounded-4xl justify-self-center dark:bg-[#3a3a3a] dark:border-[#212020]'
+        <motion.div className='flex md:h-[35rem] lg:w-[25rem] h-[15rem]  w-[23rem] flex-col gap-20 justify-center items-center border-2 rounded-4xl justify-self-center dark:bg-[#3a3a3a] dark:border-[#212020]'
           whileHover={{scale:1.029,
             boxShadow:"0px 15px 20px rgba(0, 0, 0, 0.23)",
           }}
@@ -32,7 +32,7 @@ function Contact() {
             viewport={{ once: true, amount: 0.2 }} 
               >
                 
-                <a href="https://www.linkedin.com/in/abhishek-kumar-init/" className="icon linkedin">
+                <a href="https://www.linkedin.com/in/abhishek-kumar-init/" className="icon linkedin flex items-center justify-center">
                   <i className="fa-brands fa-linkedin"></i>
                 </a>
                 <span id="linkedin"><a href="https://www.linkedin.com/in/abhishek-kumar-init/"> Linkedin</a></span>
@@ -50,7 +50,7 @@ function Contact() {
               >
 
                 
-                <a href="https://github.com/abhiishhekk" className="icon github dark:text-black text-white">
+                <a href="https://github.com/abhiishhekk" className="icon github dark:text-black text-white flex items-center justify-center -ml-0.5">
                   <i className="fa-brands fa-github"></i>
                 </a>
                 <span id="github"><a href="https://github.com/abhiishhekk">Github</a></span>
@@ -66,7 +66,7 @@ function Contact() {
             }}
             viewport={{ once: true, amount: 0.2 }} 
               >
-                <a href="https://www.instagram.com/abhiishhek_k/profilecard/?igsh=enc3MDg5MmFjY2d4" className="icon instagram">
+                <a href="https://www.instagram.com/abhiishhek_k/profilecard/?igsh=enc3MDg5MmFjY2d4" className="icon instagram flex items-center justify-center -ml-[0.075rem]">
                   <i className="fa-brands fa-instagram"></i>
                 </a>
                 
@@ -81,7 +81,7 @@ function Contact() {
             }}
             viewport={{ once: true, amount: 0.2 }} 
               >
-                <a href="https://x.com/abhiishhek_k?t=C07HXAYPPPMG-To-LEA53g&s=09" className="icon twitter">
+                <a href="https://x.com/abhiishhek_k?t=C07HXAYPPPMG-To-LEA53g&s=09" className="icon twitter flex items-center justify-center -ml-[0.08rem]">
                   <i className="fa-brands fa-x-twitter"></i>
                 </a>
                 <span id="twitter">
@@ -91,7 +91,7 @@ function Contact() {
               </motion.div>
             </div>
         </motion.div>
-        <motion.div className='flex md:min-h-[35rem] md:w-[25rem] p-6 flex-col gap-2 justify-self-center justify-center items-center border-2 rounded-4xl md:mt-0 bg-green-400 dark:bg-[#3a3a3a] dark:border-[#212020]'
+        <motion.div className='flex md:min-h-[35rem] lg:w-[25rem] p-6 w-[23rem] flex-col gap-2 justify-self-center justify-center items-center border-2 rounded-4xl md:mt-0 bg-green-400 dark:bg-[#3a3a3a] dark:border-[#212020]'
           whileHover={{scale:1.029,
             boxShadow:"0px 15px 20px rgba(0, 0, 0, 0.23)",
           }}

@@ -51,7 +51,7 @@ html, body{
     list-style-type: none;
     display: inline;
     font-size: 1.2rem;
-    margin: 1rem;
+    margin: 0.8rem;
 }
 #between ul li:hover{
     font-size: 1.3rem;
@@ -416,7 +416,7 @@ html, body{
  #social_icons{
     display:flex;
     align-items:center;
-    box-sizing: content-box;
+    /* box-sizing: content-box; */
     justify-content: center;
 }
 .fa-brands{
@@ -461,10 +461,11 @@ html, body{
     }
     #twitter{
         color:black;
+
     }
 }
 #social_icons .button .icon{
-    display:inline-block;
+    /* display:inline-block; */
     color:black;
     height:2rem;
     width:2rem;

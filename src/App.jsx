@@ -42,6 +42,7 @@ function App() {
         <Contact/>
         <hr id="hr" className='text-9xl dark:hidden'/>
         </div>
+        <div className='h-20 md:h-0'></div>
       </div>
   );
 }

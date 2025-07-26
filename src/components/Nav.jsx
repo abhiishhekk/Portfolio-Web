@@ -6,7 +6,7 @@ function Nav() {
     const theme = useSelector(state => state.theme.theme);
   return (
    
-        <nav className="nav_items  bg-white shadow-lg min-w-full  dark:bg-[#313233] pl-[2%] pr-[1%] flex items-center justify-between h-[8svh] overflow-x-hidden overflow-y-auto fixed z-[5] w-full">
+        <nav className="nav_items  bg-white shadow-lg min-w-full  dark:bg-[#313233] pl-[2%] pr-[2%] flex items-center justify-between h-[8svh] overflow-x-hidden overflow-y-auto fixed z-[5] w-full">
         <div id = "nav_left" className='dark:text-[#a34ce4]'>
             Portfolio
         </div>
@@ -18,7 +18,7 @@ function Nav() {
                 <li><a href="#projects">Projects</a></li>
             </ul>
         </div>
-        <div className='flex gap-2 items-center justify-center'>
+        <div className='flex lg:gap-2 gap-0.5 items-center justify-center'>
             <div>
                 <ThemeToggle />
             </div>
