@@ -1,7 +1,7 @@
 import React from 'react'
 import EmailCard from './EmailCard'
 import useScrollReveal from '../hooks/scrollReveal';
-import {motion} from 'motion/react'
+import {motion, scale} from 'motion/react'
 import EmailSent from './EmailSent';
 import { useSelector } from 'react-redux';
 function Contact() {
@@ -97,9 +97,11 @@ function Contact() {
           }}
           transition={{ type: "spring", stiffness: 250 }}
         >
-            <div className='text-3xl font-serif dark:text-[#a34ce4]'>
+            <motion.div className='text-3xl font-serif dark:text-[#a34ce4]'
+              // initial={{  }}     // from bottom-right
+            >
                 Send me a message!
-            </div>
+            </motion.div>
             <EmailCard/>
         </motion.div>
         {/* <EmailSent/> */}

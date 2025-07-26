@@ -26,7 +26,6 @@ function App() {
       <Nav />
       <PathIndicator />
       
-      
       <Header />
       <div className='relative'>
         

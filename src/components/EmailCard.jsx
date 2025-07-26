@@ -13,13 +13,13 @@ function EmailCard() {
     const [title, setTitle] = useState("")
     const [showToast, setShowToast] = useState(false);
 
-    // const controls = useAnimation();
-    // useEffect(()=>{
-    //   if (showToast) {
-    //     const timer = setTimeout(() => setShowToast(false), 1000);
-    //     return () => clearTimeout(timer);
-    //   }
-    // }, [showToast])
+    const controls = useAnimation();
+    useEffect(()=>{
+      if (showToast) {
+        const timer = setTimeout(() => setShowToast(false), 1000);
+        return () => clearTimeout(timer);
+      }
+    }, [showToast])
 
     
     const handleSubmit = (e)=>{
@@ -27,12 +27,12 @@ function EmailCard() {
 
         const templateParams = {
             title: title,
-            name : "Abhishek",
+            name : name,
             time: new Date().toLocaleString(),
             message: message,
             from_name: name,
             from_email : email,
-            email:"issecodarymail@gmail.com",
+            email:email,
         }
         // console.log("public key", conf.publickey);
         if(message.trim() && email.trim() && name.trim()){
@@ -61,7 +61,7 @@ function EmailCard() {
         }
   };
   return (
-    < motion.div className='relative '
+    < motion.div className='relative'
       
     >
         <EmailSent show={showToast} />
@@ -143,6 +143,13 @@ function EmailCard() {
             }}
             // transition={{ type: "spring", stiffness: 250 }}
             type='submit' className='flex items-center justify-center box-content rounded-4xl'
+            onClick={handleSubmit}
+            
+            whileTap={{
+              scale: 0.98,
+            }}
+
+            
         >Send<motion.svg
             
         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" className='dark:hidden'/></motion.svg></motion.button>
