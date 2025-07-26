@@ -46,7 +46,7 @@ export default function PathIndicator() {
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 8 }}
               exit={{ opacity: 0, x: -8 }}
-              className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap rounded bg-black px-3 py-1 text-xs text-white shadow-lg"
+              className="absolute left-6 top-1/2 -translate-y-1/2 whitespace-nowrap rounded py-1 bg-transparent text-xs dark:text-white text-gray-800"
               transition={{ duration: 0.2 }}
             >
             Go to {id.charAt(0).toUpperCase() + id.slice(1)}
