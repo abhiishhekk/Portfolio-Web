@@ -13,7 +13,7 @@ function EmailCard() {
     const [title, setTitle] = useState("")
     const [showToast, setShowToast] = useState(false);
 
-    const controls = useAnimation();
+    // const controls = useAnimation();
     // useEffect(()=>{
     //   if (showToast) {
     //     const timer = setTimeout(() => setShowToast(false), 1000);
@@ -62,50 +62,89 @@ function EmailCard() {
   };
   return (
     < motion.div className='relative '
+      
     >
         <EmailSent show={showToast} />
-    <form onSubmit={handleSubmit} className='flex flex-col gap-6 mt-3'>
-        <input
+    <form onSubmit={handleSubmit} className='flex flex-col md:gap-6 gap-2 mt-3'>
+        <motion.input
             type='text'
             placeholder='Title'
             value={title}
             onChange={(e)=>setTitle(e.target.value)}
 
             className='border-b-[0.1rem] dark:border-[#212020] text-lg focus:outline-none focus:ring-0 outline-none'
-        ></input>
-        <input
+
+            initial={{ opacity: 0, x: 0, y: 60 }}       // from bottom-right
+                            whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
+                            transition={{ 
+                              y:{duration:0.5, ease: "linear"},
+                              opacity:{duration:0.5, ease:"linear", delay:0.05}
+                             }}
+                            viewport={{ once: true, amount: 0.2 }}  
+        ></motion.input>
+        <motion.input
             type='text'
             placeholder='Your Name'
             value={name}
             onChange={(e)=>setName(e.target.value)}
 
             className='border-b-[0.1rem] dark:border-[#212020] text-lg focus:outline-none focus:ring-0 outline-none'
+            initial={{ opacity: 0, x: 0, y: 80 }}       // from bottom-right
+                            whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
+                            transition={{ 
+                              y:{duration:0.5, ease: "linear", delay:0.2},
+                              opacity:{duration:0.5, ease:"linear", delay:0.1}
+                             }}
+                            viewport={{ once: true, amount: 0.2 }}  
         >
-        </input>
-        <input
+        </motion.input>
+        <motion.input
             type='email'
             placeholder='Your email'
             value={email}
             onChange={(e)=>setEmail(e.target.value)}
             className='border-b-[0.1rem] dark:border-[#212020] text-lg focus:outline-none focus:ring-0 outline-none'
-        ></input>
-        <textarea
+            initial={{ opacity: 0, x: 0, y: 100 }}       // from bottom-right
+                            whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
+                            transition={{ 
+                              y:{duration:0.5, ease: "linear", delay:0.4},
+                              opacity:{duration:0.5, ease:"linear", delay:0.4}
+                             }}
+                            viewport={{ once: true, amount: 0.2 }}  
+        ></motion.input>
+        <motion.textarea
             cols="30"
             rows="10"
             value={message}
             placeholder='Enter your message here'
             onChange={(e)=>setMessage(e.target.value)}
             className='border-[0.1rem] dark:border-[#212020] resize-none rounded-2xl p-1 focus:outline-none focus:ring-0 outline-none font-serif'
+            initial={{ opacity: 0, x: 0, y: 100 }}     // from bottom-right
+              whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
+              transition={{ 
+                y:{duration:0.5, ease: "linear", delay:0.6},
+                opacity:{duration:0.5, ease:"linear", delay:0.6}
+            }}
+            viewport={{ once: true, amount: 0.2 }}  
         >
-        </textarea>
+        </motion.textarea>
         <motion.button
+
+            initial={{ opacity: 0, x: 0, y: 100 }}     // from bottom-right
+              whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
+              transition={{ 
+                y:{duration:0.6, ease: "linear", delay:0.5},
+                opacity:{duration:0.5, ease:"linear", delay:0.5},
+                scale:{ type: "spring", stiffness: 250 }
+            }}
+            viewport={{ once: true, amount: 0.2 }} 
             whileHover={{scale:1.029,
               boxShadow:"0px 15px 20px rgba(0, 0, 0, 0.23)",
             }}
-            transition={{ type: "spring", stiffness: 250 }}
+            // transition={{ type: "spring", stiffness: 250 }}
             type='submit' className='flex items-center justify-center box-content rounded-4xl'
         >Send<motion.svg
-            animate={controls}
+            
         xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" className='dark:hidden'/></motion.svg></motion.button>
     </form>
     </motion.div >

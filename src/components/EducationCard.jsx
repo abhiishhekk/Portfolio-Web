@@ -7,7 +7,6 @@ function EducationCard({heading, line2, duration}) {
     <motion.div className='flex flex-col m-3 gap-2'
       whileHover={{
         scale:1.04,
-
       }}
       transition={{ type: "spring", stiffness: 250 }}
     >

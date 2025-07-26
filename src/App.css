@@ -41,17 +41,7 @@ html, body{
     }
 }
 .nav_items{
-    padding-left: 2%;
-    padding-right: 1%;
-    display:flex;
-    align-items:center;
-    justify-content: space-between;
-    /* width:100%; */
-    height: 8svh;
-    overflow-x:hidden;
-    overflow-y: auto;
-    position:fixed;
-    z-index: 5;
+    
 }
 #between{
     text-align: center;
@@ -159,27 +149,28 @@ html, body{
 .head{
     /* margin-top: 10svh; */
     padding-top: 0svh;
-    height: 100svh;
+    /* height: 100svh; */
     width:100%;
-    /* position: relative; */
+    
 }
 .main{
     /* margin-top: 10svh; */
+    padding-top: 0svh;
     display:flex;
     /* width:100%; */
-    height:100%;
+    /* height:100%; */
     justify-content:space-between;
     align-items: center;
     /* perspective: 1px; */
     gap:1rem;
 }
 .main_page{
-    height: screen;
+    /* height: screen; */
     padding-left: 2%;
     padding-right: 2%;
-    display: grid;
+    /*display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
     /* row-gap: 1svh; */
     /* width: 50svw; */
 }
@@ -277,97 +268,25 @@ html, body{
 #flex_for_resume:hover{
     transform: scale(0.97);
 }
-#social_icons{
-    display:flex;
-    align-items:center;
-    box-sizing: content-box;
-    justify-content: center;
-}
-.fa-brands{
-    color:black;
-}
-#social_icons .button{ 
-    display: flex;
-    align-items: center;
-    height:2.8rem;
-    width:2.8rem;
-    margin:0 0.6rem;
-    padding:0.2rem;
-    background-color: #fff;
-    border-radius: 50%;
-    cursor: pointer;
-    overflow: hidden;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
-    transition: all 0.3s ease-out;
-}
-#social_icons .button:hover{
-    width:9rem;
-    border-radius: 1.8rem;
-    transform: scale(1.05);
-    .icon .fa-linkedin{
-        border-radius: 40%;
-        color:rgb(0, 128, 255);
-    }
-    #linkedin{
-        color:rgb(0, 128, 255);
-    }
 
-    .icon .fa-instagram{
-        border-radius: 40%;
-        color:rgb(255, 4, 0);
-        
-    }
-    #instagram{
-        color:rgb(255, 64, 0);
-    }
-    #github{
-        color:black;
-    }
-    #twitter{
-        color:black;
-    }
-}
-#social_icons .button .icon{
-    display:inline-block;
-    color:black;
-    height:2rem;
-    width:2rem;
-    text-align: center;
-    border-radius: 50%;
-    box-sizing: content-box;
-    line-height: 0rem;
-}
-#social_icons .button .icon {
-    font-size: 2rem;
-    line-height:2.5rem;
-    padding-left: 0.37rem;
-    text-align: center;
-}
-#social_icons .button span{
-    font-size: 1.2rem;
-    font-weight: 500;
-    padding-left: 0.5rem;
-    height:1rem;
-    line-height: 1.2rem;
-}
 #img1 img{
     border-radius: 0.5rem;
-    width:25svw;
+    /* width:25svw; */
     opacity: 0.7;
     z-index: 0;
 }
 #img1, #img2, #img3-4{
-    animation:translateY;
+    /* animation:translateY; */
     /* animation-iteration-count: infinite; */
-    animation-timeline: view();
-    animation-range: cover;
+    /* animation-timeline: view(); */
+    /* animation-range: cover; */
 
 }
 
 #img2 img{
     border-radius: 0.5rem;
-    margin-top: -18svh;
-    scale: 1.4;
+    /* margin-top: -18svh; */
+    scale: 1.6;
     width:40svw;
     /* -webkit-filter: grayscale(100%); Safari 6.0 - 9.0 */
     /* filter: grayscale(100%); */
@@ -385,8 +304,10 @@ html, body{
     opacity:1;
     
  }
+
+ 
  #images{
-    align-items: center;
+    /* align-items: center; */
     gap:1svw;
     /* background: radial-gradient(circle, rgba(0, 0, 0, 0.105), white 60%); */
  }
@@ -402,9 +323,6 @@ html, body{
  }
  #img1, #img2, #img3, #img4{
     background-color: transparent;
- }
- #img4{
-    opacity: 0.4;
  }
 
  /* .page2{
@@ -495,3 +413,76 @@ html, body{
     
  }
  
+ #social_icons{
+    display:flex;
+    align-items:center;
+    box-sizing: content-box;
+    justify-content: center;
+}
+.fa-brands{
+    color:black;
+}
+#social_icons .button{ 
+    display: flex;
+    align-items: center;
+    height:2.8rem;
+    width:2.8rem;
+    margin:0 0.6rem;
+    padding:0.2rem;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+}
+#social_icons .button:hover{
+    width:9rem;
+    border-radius: 1.8rem;
+    transform: scale(1.05);
+    .icon .fa-linkedin{
+        border-radius: 40%;
+        color:rgb(0, 128, 255);
+    }
+    #linkedin{
+        color:rgb(0, 128, 255);
+    }
+
+    .icon .fa-instagram{
+        border-radius: 40%;
+        color:rgb(255, 4, 0);
+        
+    }
+    #instagram{
+        color:rgb(255, 64, 0);
+    }
+    #github{
+        color:black;
+    }
+    #twitter{
+        color:black;
+    }
+}
+#social_icons .button .icon{
+    display:inline-block;
+    color:black;
+    height:2rem;
+    width:2rem;
+    text-align: center;
+    border-radius: 50%;
+    box-sizing: content-box;
+    line-height: 0rem;
+}
+#social_icons .button .icon {
+    font-size: 2rem;
+    line-height:2.5rem;
+    padding-left: 0.37rem;
+    text-align: center;
+}
+#social_icons .button span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    height:1rem;
+    line-height: 1.2rem;
+}

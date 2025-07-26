@@ -16,13 +16,13 @@ function Page22() {
             
         ]
   return (
-    <div ref={container} className='projects mt-20'>
+    <div id='skills' ref={container} className='scroll-mt-[-8rem] projects mt-20'>
 
-        <motion.div id='skills' className='-scroll-mt-30 projects-text justify-self-center'
+        <motion.div  className='projects-text justify-self-center'
             initial={{ opacity: 0, x: -100, y: 0 }}       
                   whileInView={{ opacity: 1, x: 0, y: 0 }}   
-                  transition={{ duration:0.6, ease: "easeInOut" }}
-                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration:0.5, ease: "easeInOut" }}
+                  viewport={{ once: true, amount: 0.3 }}
         >Skills</motion.div>
         <div className='relative'>
             {skills.map((proj, i) => {

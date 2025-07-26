@@ -16,13 +16,13 @@ function Page3() {
     {heading: "Matriculation", line2:"Gyan Bharti Model Residential Complex, Dhanwan, Hisua", duration:"2020"},
   ]
   return (
-    <div id='education' className='scroll-mt-20 education mt-30 mb-40 flex flex-col items-center justify-center'>
+    <div id='education' className='scroll-mt-5 education  flex flex-col items-center justify-center mr-3 ml-3 lg:h-screen'>
       <motion.div className='qualification-text justify-self-center'
                 initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
                 whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
                 transition={{ duration:0.6, ease: "linear" }}
                 viewport={{ once: true, amount: 0.2 }}
-      >Qualification</motion.div>
+      >Education</motion.div>
       <div className='md:w-[50rem] md:h-[32rem] qualification-box grid  grid-rows-1 grid-cols-1'>
         
         <motion.div className=' flex flex-col items-center content-center  bg-[#7CFC00] rounded-4xl pb-8 md:pt-4 dark:bg-[#3a3a3a]'
@@ -38,8 +38,8 @@ function Page3() {
                 transition={{ duration:0.6, ease: "linear" }}
                 viewport={{ once: true, amount: 0.2 }}
           >
-            <img src={rulerPencilIcon} alt="" />
-            Education
+            {/* <img src={rulerPencilIcon} alt="" />
+            Education */}
           </motion.div>
           <motion.div className=' grid grid-cols-1 grid-rows-3'
             initial={{ opacity: 0, x: 0, y: 100 }}       // from bottom-right

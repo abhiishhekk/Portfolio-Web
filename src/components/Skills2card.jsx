@@ -42,7 +42,7 @@ function Skills2card({i, id, skillType, bgCol ,progress, range, targetScale}) {
   const theme = useSelector(state => state.theme.theme);
   if(theme === "dark") bgCol = "#3a3a3a";
   return (
-    <div ref={container} className=' h-screen md:w-[50rem] flex justify-center items-center justify-self-center mt-0 sticky top-0 pt-0 overflow-x-hidden md:overflow-x-visible'
+    <div ref={container} className=' h-screen md:w-[50rem] flex justify-center items-center justify-self-center mt-0 sticky top-0 pt-0  md:overflow-x-visible'
     >
       <motion.div 
       className='flex flex-col relative origin-top'
@@ -75,7 +75,7 @@ function Skills2card({i, id, skillType, bgCol ,progress, range, targetScale}) {
                               initial={{ opacity: 0, x: 0, y: 100 }}       
                               whileInView={{ opacity: 1, x: 0, y: 0 }}   
                               transition={{ duration:0.6 + 0.4, ease: "easeInOut" }}
-                              viewport={{ once: true, amount: 0.2 }}
+                              viewport={{ once: true, amount: 0.4 }}
                             >
                                 <SkillsCard key={id} {...skills} />
                             </motion.div>
@@ -91,7 +91,7 @@ function Skills2card({i, id, skillType, bgCol ,progress, range, targetScale}) {
                               initial={{ opacity: 0, x: 0, y: 100 }}       
                               whileInView={{ opacity: 1, x: 0, y: 0 }}   
                               transition={{ duration:0.6 + 0.4, ease: "easeInOut" }}
-                              viewport={{ once: true, amount: 0.2 }}
+                              viewport={{ once: true, amount: 0.4 }}
                             >
                                 <SkillsCard key={id} {...skills} />
                             </motion.div>

@@ -37,23 +37,29 @@ function ProjectCardParallax({i, id, title, image, bgCol, link,  description ,pr
         className='md:w-[50rem] md:h-[30rem] flex justify-center items-center rounded-4xl p-6 overflow-x-hidden '
         >
           
-          <div className='grid w-full h-full md:grid-cols-2 grid-rows-1 gap-5'>
+          <div className='grid w-full h-fit md:grid-cols-2 grid-rows-1 gap-5 '>
             
-            <div className='flex  flex-col justify-center items-center font-serif text-lg'>
-              <div className='w-full'>
+            <div className='flex  flex-col justify-center items-center font-serif text-lg '>
+              <div className='w-full rounded-4xl  p-4'>
                 <motion.div
-                className='font-serif font-bold pb-4 dark:text-[#a34ce4]'
-                initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
+                className='mb-4 rounded-4xl border-2 w-fit pl-2 pr-2 dark:bg-[#a34ce4]'
+                initial={{ opacity: 0, x: 0, y: 100 }}       // from bottom-right
                 whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
-                transition={{ duration:0.6, ease: "linear" }}
+                transition={{ 
+                  y:{duration:0.5, ease: "linear",},
+                  opacity:{duration:0.4, ease:"anticipate", delay:0},
+                 }}
                 viewport={{ once: true, amount: 0.2 }}       // only once, 20% visible
                 >
                   {title}
                 </motion.div>
                 <motion.div
-                  initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
+                  initial={{ opacity: 0, x: 0, y: 100 }}       // from bottom-right
                 whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
-                transition={{ duration:0.9, ease: "linear" }}
+                transition={{ 
+                  y:{duration:0.6, ease: "linear", delay:0.2},
+                  opacity:{duration:0.7, ease:"anticipate", delay:0.1},
+                 }}
                 viewport={{ once: true, amount: 0.2 }}       // only once, 20% visible
                 >
                 {description}
