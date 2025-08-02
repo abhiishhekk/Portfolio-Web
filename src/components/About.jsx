@@ -23,7 +23,7 @@ const About = () => {
   };
 
   return (
-    <section className=" -scroll-mt-12 max-w-screen md:mr-[6rem] md:ml-[6rem] mr-[2rem] ml-[2rem] min-h-[150svh] flex items-center justify-centern py-[10rem]" id="about-me">
+    <section className="[content-visibility:auto] [contain:layout_style] -scroll-mt-12 max-w-screen md:mr-[6rem] md:ml-[6rem] mr-[2rem] ml-[2rem] min-h-[150svh] flex items-center justify-centern py-[10rem]" id="about-me">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 ">
         <motion.div className="xl:col-span-1 xl:row-span-3"
         
@@ -70,7 +70,7 @@ const About = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.3 }}
         >
-          <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="[content-visibility:auto] [contain:layout_style] grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
               <Globe
                 height={326}
@@ -108,18 +108,18 @@ const About = () => {
             </div>
             <div className='flex flex-col gap-3'>
               <p className="grid-headtext text-xl font-semibold mb-2 text-white font-generalsans">Education</p>
-              <p className="grid-subtext text-[#afb0b6] text-base font-generalsans">
+              <div className="grid-subtext text-[#afb0b6] text-base font-generalsans">
                 <h1 className='font-bold text-lg'>B.Tech. in Computer Science Engineering</h1>
                 <p>Motilal Nehru National Institue of Technology Allahabad, Prayagraj, Uttar Pradesh</p>
-              </p>
-              <p className="grid-subtext text-[#afb0b6] text-base font-generalsans">
+              </div>
+              <div className="grid-subtext text-[#afb0b6] text-base font-generalsans">
                 <h1 className='font-bold text-lg'>Senior Secondary</h1>
                 <p> Nardiganj College Nargiganj, Nardiganj, Bihar</p>
-              </p>
-              <p className="grid-subtext text-[#afb0b6] text-base font-generalsans">
+              </div>
+              <div className="grid-subtext text-[#afb0b6] text-base font-generalsans">
                 <h1 className='font-bold text-lg'>Matriculation</h1>
                 <p>Gyan Bharti Model Residential Complex, Hisua, Bihar</p>
-              </p>
+              </div>
             </div>
           </div>
         </motion.div>

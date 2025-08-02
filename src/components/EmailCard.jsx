@@ -12,7 +12,7 @@ function EmailCard() {
     const [message, setMessage] = useState("");
     const [title, setTitle] = useState("")
     const [showToast, setShowToast] = useState(false);
-
+    const [emailSent, setEmailSent] = useState(false);
     const controls = useAnimation();
     useEffect(()=>{
       if (showToast) {
@@ -45,8 +45,10 @@ function EmailCard() {
             opacity: 0,
             transition: { duration: 0.5 },
           });
-          setShowToast(true);
-          setTimeout(()=>setShowToast(false), 2000);
+          // setShowToast(true);
+          setEmailSent(true);
+          // setTimeout(()=>setShowToast(false), 2000);
+          setTimeout(()=>setEmailSent(false), 3000);
           setName("");
           setEmail("");
           setMessage("");
@@ -61,10 +63,9 @@ function EmailCard() {
         }
   };
   return (
-    < motion.div className='relative'
+    < motion.div className='relative flex flex-col gap-4 items-center'
       
     >
-        <EmailSent show={showToast} />
     <form onSubmit={handleSubmit} className='flex flex-col md:gap-6 gap-2 mt-3 dark:text-[#afb0b6]'>
         <motion.input
             type='text'
@@ -128,8 +129,9 @@ function EmailCard() {
             viewport={{ once: true, amount: 0.2 }}  
         >
         </motion.textarea>
-        <motion.button
-
+        
+    </form>
+    <motion.button
             initial={{ opacity: 0, x: 0, y: 0}}     // from bottom-right
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
               transition={{ 
@@ -142,18 +144,18 @@ function EmailCard() {
               boxShadow:"0px 15px 20px rgba(0, 0, 0, 0.23)",
             }}
             // transition={{ type: "spring", stiffness: 250 }}
-            type='submit' className='flex items-center justify-center box-content rounded-4xl'
+            type='submit' className={`flex items-center justify-center box-content rounded-lg text-xl  cursor-pointer w-[14rem] h-[2.5rem] text-white
+                dark:bg-[#393838]
+              `}
             onClick={handleSubmit}
-            
             whileTap={{
-              scale: 0.98,
+              scale: 0.92,
             }}
 
             
-        >Send<motion.svg
-            
-        xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" className='dark:hidden'/></motion.svg></motion.button>
-    </form>
+        >
+          {emailSent === true ? 'Email sent!' : 'Send'}
+        </motion.button>
     </motion.div >
   )
 }
