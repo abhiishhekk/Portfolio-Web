@@ -1,11 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import Nav from './components/Nav';
 import './App.css'
-import Page2 from './components/Page2';
-import Page3 from './components/Page3';
+
+
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Page22 from './components/Page22';
 import PathIndicator from './components/PathIndicator';
 import Header from './components/Header';
 import About from './components/About';
