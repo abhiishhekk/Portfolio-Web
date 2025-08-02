@@ -14,7 +14,7 @@ function Contact() {
     <motion.div id='contact' className='h-dvh md:mt-0 mt-30 grid md:grid-cols-2 grid-cols-1 grid-rows-1 justify-self-center items-center gap-40 '
                 
     >
-        <motion.div className='flex md:h-[35rem] lg:w-[25rem] h-[15rem]  w-[23rem] flex-col gap-20 justify-center items-center border-2 rounded-4xl justify-self-center dark:bg-[#3a3a3a] dark:border-[#212020]'
+        <motion.div className='flex md:h-[35rem] lg:w-[25rem] h-[15rem]  w-[23rem] flex-col gap-20 justify-center items-center border-2 rounded-4xl justify-self-center dark:bg-[#161616] dark:border-[#212020]'
           whileHover={{scale:1.029,
             boxShadow:"0px 15px 20px rgba(0, 0, 0, 0.23)",
           }}
@@ -91,7 +91,7 @@ function Contact() {
               </motion.div>
             </div>
         </motion.div>
-        <motion.div className='flex md:min-h-[35rem] lg:w-[25rem] p-6 w-[23rem] flex-col gap-2 justify-self-center justify-center items-center border-2 rounded-4xl md:mt-0 bg-green-400 dark:bg-[#3a3a3a] dark:border-[#212020]'
+        <motion.div className='flex md:min-h-[35rem] lg:w-[25rem] p-6 w-[23rem] flex-col gap-2 justify-self-center justify-center items-center border-2 rounded-4xl md:mt-0 bg-green-400 dark:bg-[#161616] dark:border-[#212020]'
           whileHover={{scale:1.029,
             boxShadow:"0px 15px 20px rgba(0, 0, 0, 0.23)",
           }}

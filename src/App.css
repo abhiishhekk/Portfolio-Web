@@ -131,7 +131,7 @@ html, body{
     /* position: absolute; */
 }
 .dark #arrowUsed span{
-    background-color: #313233;
+    background-color: color-mix(in oklab, var(--color-black));
     color: #a34ce4;
 }
 #arrowUsed:hover span{
@@ -313,7 +313,7 @@ html, body{
  }
 
  .dark #images{
-    background-color: #212020;
+    background-color: #100f0f;
  }
  #img3-4{
     display:flex;

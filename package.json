@@ -19,9 +19,11 @@
     "motion": "^12.23.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-globe.gl": "^2.35.0",
     "react-redux": "^9.2.0",
     "scrollreveal": "^4.0.9",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "three": "^0.179.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",

@@ -46,12 +46,12 @@ function EmailCard() {
             transition: { duration: 0.5 },
           });
           setShowToast(true);
-          setTimeout(()=>setShowToast(false), 1500);
+          setTimeout(()=>setShowToast(false), 2000);
           setName("");
           setEmail("");
           setMessage("");
 
-          setTimeout(() => controls.set({ y: 0, opacity: 1 }), 1000);
+          setTimeout(() => controls.set({ y: 0, opacity: 1 }), 2000);
         },
         (error) => {
           console.log('FAILED...', error);
@@ -65,7 +65,7 @@ function EmailCard() {
       
     >
         <EmailSent show={showToast} />
-    <form onSubmit={handleSubmit} className='flex flex-col md:gap-6 gap-2 mt-3'>
+    <form onSubmit={handleSubmit} className='flex flex-col md:gap-6 gap-2 mt-3 dark:text-[#afb0b6]'>
         <motion.input
             type='text'
             placeholder='Title'

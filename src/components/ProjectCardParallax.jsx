@@ -13,7 +13,7 @@ function ProjectCardParallax({i, id, title, image, bgCol, link,  description ,pr
   const scale = useTransform(progress, range, [1, targetScale])
   const topOffset = `${i*2}rem`;
   const theme = useSelector(state => state.theme.theme);
-  if(theme==="dark") bgCol = "#3a3a3a";
+  if(theme==="dark") bgCol = "#161616";
   return (
     <div ref={container} className=' h-dvh md:w-[50rem] flex justify-center items-center justify-self-center mt-0 sticky top-0 pt-0 overflow-x-hidden md:overflow-x-visible'
     >
@@ -60,7 +60,8 @@ function ProjectCardParallax({i, id, title, image, bgCol, link,  description ,pr
                   y:{duration:0.6, ease: "linear", delay:0.2},
                   opacity:{duration:0.7, ease:"anticipate", delay:0.1},
                  }}
-                viewport={{ once: true, amount: 0.2 }}       // only once, 20% visible
+                viewport={{ once: true, amount: 0.2 }}  
+                className='dark:text-[#afb0b6]'     // only once, 20% visible
                 >
                 {description}
                 </motion.div>

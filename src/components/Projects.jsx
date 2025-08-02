@@ -21,7 +21,7 @@ function Projects() {
   return (
     <div ref={container} className='projects mt-20'>
 
-        <motion.div id='projects' className='-scroll-mt-28 projects-text justify-self-center '
+        <motion.div id='projects' className='-scroll-mt-28 projects-text justify-self-center dark:text-white'
             initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
                 whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
                 transition={{ duration:0.6, ease: "linear" }}

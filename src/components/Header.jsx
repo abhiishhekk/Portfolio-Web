@@ -20,9 +20,7 @@ function Header() {
 const rightMV  = useTransform(scrollYProgress, [0, 1], [0, 25]);
 const bottomMV = useTransform(scrollYProgress, [0, 1], [0, 25]);
 const leftMV   = useTransform(scrollYProgress, [0, 1], [0, 25]);
-    const clipPath = useMotionTemplate`
-  inset(${topMV}% ${rightMV}% ${bottomMV}% ${leftMV}% round 8px)
-`;
+const clipPath = useMotionTemplate`inset(${topMV}% ${rightMV}% ${bottomMV}% ${leftMV}% round 8px)`;
 const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
   return (
 
@@ -30,7 +28,7 @@ const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
       
     >
       
-        <motion.div  id="main" className="main scroll-mt-[200svh] min-w-full sticky top-40" 
+        <motion.div  id="main" className="main scroll-mt-[200svh] min-w-full sticky top-40 backdrop-blur-xl" 
           style={{ opacity, scale }}
           
         >
@@ -38,9 +36,9 @@ const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
           >
             <div className='flex flex-col justify-end items-start'>
             <motion.div id="developer"
-              initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
+              initial={{ opacity: 0, x: 0, y: 100 }}       // from bottom-right
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
-              transition={{ duration:0.3, ease: "linear" }}
+              transition={{ duration:0.9, type: "spring", stiffness: 170 }}
               viewport={{ once: true, amount: 0.2 }}       // only once, 20% visible
             >
               <div id="border_for_developer" className='dark:text-[#864ab2] dark:border-[#864ab2]'>
@@ -51,13 +49,15 @@ const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
               </div>
             </motion.div>
 
-            <motion.div id='intro' className='lg:text-[12svh] text-[9svh] dark:text-white'
-              initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
-              whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
+            <div style={{perspective: "1000px"}} className='flex flex-col justify-center items-start'>
+              <motion.div id='intro' className='lg:text-[12svh] text-[9svh] dark:text-white'
+              initial={{ opacity: 0, x: -100, y: 0, rotateZ:-50, rotateX:-50}}       // from bottom-right
+              whileInView={{ opacity: 1, x: 0, y: 0, rotateZ:0, rotateX:0}}     // to original position
               transition={{ 
                 x:{duration:0.6, ease: "linear"},
                 opacity: {duration:0.6, delay:0.3, ease:"linear"},
                }}
+               style={{perspective: "1000px"}}
               viewport={{ once: true, amount: 0.2 }}       // only once, 20% visible
             > Hello, I'm</motion.div> </div>
             <motion.div id='intro' className='lg:text-[12svh] text-[9svh]'
@@ -69,8 +69,9 @@ const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
                 }}
               viewport={{ once: true, amount: 0.2 }}       // only once, 20% visible
             > Abhishek Kumar</motion.div>
+            </div>
             <div className='flex flex-col gap-2'>
-            <motion.div id="intro_description" className='font-serif'
+            <motion.div id="intro_description" className='font-serif dark:text-[#afb0b6]'
               initial={{ opacity: 0, x: -100, y: 0 }}       // from bottom-right
               whileInView={{ opacity: 1, x: 0, y: 0 }}     // to original position
               transition={{ 
@@ -95,7 +96,7 @@ const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
             </div>
           </motion.div>
           
-            <motion.div id='images' className=" xl:flex hidden xl:dark:bg-[#212020] mr-9"
+            <motion.div id='images' className=" xl:flex hidden xl:dark:bg-[#100f0f] mr-9"
               
             >
               <motion.div className="photo" id="img1"

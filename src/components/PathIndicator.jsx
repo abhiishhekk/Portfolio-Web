@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-const SECTIONS = ['main', 'skills', 'education', 'projects', 'contact'];
+const SECTIONS = ['main', 'about-me', 'projects', 'contact'];
 
 export default function PathIndicator() {
   const [active, setActive] = useState(0);

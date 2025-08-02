@@ -8,7 +8,7 @@ import Contact from './components/Contact';
 import Page22 from './components/Page22';
 import PathIndicator from './components/PathIndicator';
 import Header from './components/Header';
-
+import About from './components/About';
 import { useSelector } from 'react-redux';
 function App() {
   const theme = useSelector(state => state.theme.theme);
@@ -21,7 +21,7 @@ function App() {
   }, [theme]);
   return (
 
-    <div className={`theme === 'dark'? 'dark' : '' dark:bg-[#212020] dark:text-white` }>
+    <div className={`theme === 'dark'? 'dark' : '' dark:bg-[#100f0f]` }>
 
       <Nav />
       <PathIndicator />
@@ -29,18 +29,18 @@ function App() {
       <Header />
       <div className='relative'>
         
-          <hr id="hr" className='text-9xl mt-10 dark:hidden'/>
-        <Page22/>
+          {/* <hr id="hr" className='text-9xl mt-10 dark:hidden'/> */}
+        <About/>
         {/* <div id="edu">Education</div> */}
-        <hr id="hr" className='dark:hidden' />
-        <Page3/>
+        {/* <hr id="hr" className='dark:hidden' /> */}
+        {/* <Page3/> */}
 
-        <hr id="hr" className='text-9xl dark:hidden'/>
+        {/* <hr id="hr" className='text-9xl dark:hidden'/> */}
         <Projects/>
 
-        <hr id="hr" className='text-9xl dark:hidden'/>
+        {/* <hr id="hr" className='text-9xl dark:hidden'/> */}
         <Contact/>
-        <hr id="hr" className='text-9xl dark:hidden'/>
+        {/* <hr id="hr" className='text-9xl dark:hidden'/> */}
         </div>
         <div className='h-20 md:h-0'></div>
       </div>
