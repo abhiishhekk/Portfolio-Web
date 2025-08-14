@@ -26,10 +26,11 @@ function App() {
       <PathIndicator />
       
       <Header />
-      <div className='relative'>
+      <About/>
+      <div className='flex items-center justify-center'>
         
           {/* <hr id="hr" className='text-9xl mt-10 dark:hidden'/> */}
-        <About/>
+        
         {/* <div id="edu">Education</div> */}
         {/* <hr id="hr" className='dark:hidden' /> */}
         {/* <Page3/> */}
@@ -38,9 +39,10 @@ function App() {
         <Projects/>
 
         {/* <hr id="hr" className='text-9xl dark:hidden'/> */}
-        <Contact/>
+        
         {/* <hr id="hr" className='text-9xl dark:hidden'/> */}
         </div>
+        <Contact/>
         <div className='h-20 md:h-0'></div>
       </div>
   );

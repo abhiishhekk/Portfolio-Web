@@ -15,7 +15,7 @@ function ProjectCardParallax({i, id, title, image, bgCol, link,  description ,pr
   const theme = useSelector(state => state.theme.theme);
   if(theme==="dark") bgCol = "#161616";
   return (
-    <div ref={container} className=' h-dvh md:w-[50rem] flex justify-center items-center justify-self-center mt-0 sticky top-0 pt-0 overflow-x-hidden md:overflow-x-visible'
+    <div ref={container} className=' h-dvh md:w-[50rem] flex justify-center items-center mt-0 sticky top-0 pt-0 overflow-x-hidden md:overflow-x-visible'
     >
       <motion.div 
       className='flex flex-col relative origin-top'
@@ -34,7 +34,7 @@ function ProjectCardParallax({i, id, title, image, bgCol, link,  description ,pr
         }
         
         }
-        className='md:w-[50rem] md:h-[30rem] flex justify-center items-center rounded-4xl p-6 overflow-x-hidden '
+        className='md:w-[50rem] w-screen md:h-[30rem] flex justify-center items-center rounded-4xl p-6 overflow-x-hidden '
         >
           
           <div className='grid w-full h-fit md:grid-cols-2 grid-rows-1 gap-5 '>
