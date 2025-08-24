@@ -6,7 +6,7 @@ import grid3 from '../assets/grid3.png'
 import grid4 from '../assets/grid4.png'
 import tick from '../assets/tick.svg'
 import copy from '../assets/copy.svg'
-import Button from './Button';
+import Button from './Button'
 import CurveLine from '../assets/CurveLine.svg'
 import {motion} from 'motion/react'
 const About = () => {
@@ -23,7 +23,7 @@ const About = () => {
   };
 
   return (
-    <section className="[content-visibility:auto] [contain:layout_style] -scroll-mt-12 max-w-screen md:mr-[6rem] md:ml-[6rem] mr-[2rem] ml-[2rem] min-h-[150svh] flex items-center justify-centern py-[10rem]" id="about-me">
+    <section className="[content-visibility:auto] [contain:layout_style] -scroll-mt-12 max-w-screen md:mr-[4.5rem] md:ml-[4.5rem] mr-[2rem] ml-[2rem] min-h-[150svh] flex items-center justify-centern py-[10rem]" id="about-me">
       <div className="grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 ">
         <motion.div className="xl:col-span-1 xl:row-span-3"
         
@@ -41,6 +41,11 @@ const About = () => {
                 I love solving problems and building things through code. Programming isn&apos;t just my
                 profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
               </p>
+              <div className='md:flex md:mt-2 md:gap-2'>
+                {/* <div className='dark:bg-[#393838] pr-2 pl-2 py-1.5 rounded-3xl'>Leetcode</div> */}
+                <Button name="Leetcode" containerClass="w-full md:mt-10 mt-5 rounded-md" link="https://leetcode.com/u/abhiishhek_k/"/>
+                <Button name="Codeforces" containerClass="w-full md:mt-10 mt-5 rounded-md" link="https://codeforces.com/profile/abhiishhek_k"/>
+              </div>
             </div>
           </div>
         </motion.div>
@@ -52,7 +57,7 @@ const About = () => {
                 viewport={{ once: false, amount: 0.3 }}
         >
           <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <img src={grid2} alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain" />
+            <img src={grid2} alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
 
             <div>
               <p className="grid-headtext text-xl font-semibold mb-2 text-white font-generalsans">Tech Stack</p>
@@ -88,7 +93,7 @@ const About = () => {
               <div>
                 <p className="grid-headtext text-xl font-semibold mb-2 text-white font-generalsans">I’m very flexible with time zone communications & locations</p>
                 <p className="grid-subtext text-[#afb0b6] text-base font-generalsans">I&apos;m based in Bihar, India and open to remote work worldwide.</p>
-                <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+                <Button name="Contact Me" isBeam containerClass="w-full mt-10 rounded-md" />
               </div>
             </a>
           </div>
