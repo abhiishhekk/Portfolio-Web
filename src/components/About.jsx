@@ -31,9 +31,9 @@ const About = () => {
                 initial={{ opacity: 0}}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="grid-container  border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="grid-container  border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5 h-full">
             <img src={grid3} alt="grid-1" className="w-full sm:h-[19rem] h-fit object-contain sm:scale-150" />
 
             <div>
@@ -43,8 +43,8 @@ const About = () => {
               </p>
               <div className='md:flex md:mt-2 md:gap-2'>
                 {/* <div className='dark:bg-[#393838] pr-2 pl-2 py-1.5 rounded-3xl'>Leetcode</div> */}
-                <Button name="Leetcode" containerClass="w-full md:mt-10 mt-5 rounded-md" link="https://leetcode.com/u/abhiishhek_k/"/>
-                <Button name="Codeforces" containerClass="w-full md:mt-10 mt-5 rounded-md" link="https://codeforces.com/profile/abhiishhek_k"/>
+                <Button name="Leetcode" logo="leetcode" containerClass="w-full md:mt-10 mt-5 rounded-md" link="https://leetcode.com/u/abhiishhek_k/"/>
+                <Button name="Codeforces" logo="codeforces" containerClass="w-full md:mt-10 mt-5 rounded-md" link="https://codeforces.com/profile/abhiishhek_k"/>
               </div>
             </div>
           </div>
@@ -54,10 +54,10 @@ const About = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <img src={grid2} alt="grid-2" className="w-full sm:h-[276px] h-fit object-contain"/>
+          <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg  p-4 flex flex-col gap-5">
+            <img src={grid2} alt="grid-2" className="w-full sm:h-[275px] h-fit object-contain"/>
 
             <div>
               <p className="grid-headtext text-xl font-semibold mb-2 text-white font-generalsans">Tech Stack</p>
@@ -82,10 +82,10 @@ const About = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="[content-visibility:auto] [contain:layout_style] grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
-            <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center">
+          <div className="[content-visibility:auto] [contain:layout_style] grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5 justify-center">
+            <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center -mt-5">
               <Globe
                 height={326}
                 width={326}
@@ -112,12 +112,12 @@ const About = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col justify-center gap-5">
             <div className=''>
                 <div className='h-[150px] overflow-y-clip flex  justify-center'>
-                    <img src={CurveLine} alt="grid-3" className="w-[100svw] sm:h-[200px] h-fit object-contain " />
+                    <img src={CurveLine} alt="grid-3" className="w-[300svw] sm:h-[200px] h-fit object-contain " />
                 </div>
             </div>
             <div className='flex flex-col gap-3'>
@@ -142,7 +142,7 @@ const About = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: false, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.2 }}
         >
           <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
