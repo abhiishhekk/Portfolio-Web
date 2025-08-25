@@ -9,6 +9,7 @@ import copy from '../assets/copy.svg'
 import Button from './Button'
 import CurveLine from '../assets/CurveLine.svg'
 import {motion} from 'motion/react'
+import Icon from './Icon';
 const About = () => {
   const [hasCopied, setHasCopied] = useState(false);
 
@@ -38,8 +39,7 @@ const About = () => {
             <div>
               <p className="grid-headtext text-xl font-semibold mb-2 text-white font-generalsans">My Passion for coding</p>
               <p className="grid-subtext text-[#afb0b6] text-base font-generalsans">
-                I love solving problems and building things through code. Programming isn&apos;t just my
-                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.
+                  I am a Computer Science undergraduate at MNNIT Allahabad with a strong foundation in DSA and OOP. I enjoy competitive programming and full-stack development, having solved 500+ problems on LeetCode and built scalable applications like TaskOrbit.
               </p>
               <div className='md:flex md:mt-2 md:gap-2'>
                 {/* <div className='dark:bg-[#393838] pr-2 pl-2 py-1.5 rounded-3xl'>Leetcode</div> */}
@@ -62,9 +62,18 @@ const About = () => {
             <div>
               <p className="grid-headtext text-xl font-semibold mb-2 text-white font-generalsans">Tech Stack</p>
               <p className="grid-subtext text-[#afb0b6] text-base font-generalsans">
-                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable
-                applications
+                Skilled in C++, with experience in React, Node.js, Express, MongoDB, and Tailwind CSS. Familiar with Google Cloud, Appwrite, and Git, and comfortable building scalable full-stack applications.
               </p>
+              <div className='grid lg:grid-cols-3 grid-cols-4 mt-10 gap-y-5'>
+                <Icon logo="c" text="C"/>
+                <Icon logo="cplus" text='c++'/>
+                <Icon logo="git" text='Git'/>
+                <Icon logo="vite" text='vite'/>
+                <Icon logo="tailwind" text='Tailwind'/>
+                <Icon logo="js" text='JS'/>
+                <Icon logo="mongodb" text='Mongodb'/>
+                <Icon logo="css" text='CSS'/>
+              </div>
             </div>
           </div>
         </motion.div>
