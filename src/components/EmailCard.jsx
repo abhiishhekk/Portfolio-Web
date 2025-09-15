@@ -1,8 +1,8 @@
-import { form } from 'motion/react-client'
+// import { form } from 'motion/react-client'
 import React, { useEffect, useState } from 'react'
 import conf from '../conf/conf';
 import emailjs from '@emailjs/browser';
-import EmailSent from './EmailSent';
+// import EmailSent from './EmailSent';
 import {motion, useAnimation} from 'motion/react'
 import { useSelector } from 'react-redux';
 function EmailCard() {

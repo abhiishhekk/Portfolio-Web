@@ -19,9 +19,9 @@ const Icon = ({logo, text="icon"})=>{
     if(logo == "tailwind") logo = tailwindLogo;
 
   return (
-        <div className='lg:dark:bg-[#393838] lg:w-[7.2rem]  flex gap-1 px-3 rounded-2xl content-center items-center border-blue-600 py-0.5 justify-self-center'>
+        <div className='lg:dark:bg-[#393838] lg:w-[7.2rem]   flex gap-1 px-3 rounded-2xl content-center items-center border-blue-600 py-0.5 justify-self-center'>
             <img src={logo} alt="" className='lg:h-[1.3rem] h-[1.5rem]'/>
-            <p className='text-white hidden lg:block'>{text}</p>
+            <p className='dark:text-white hidden lg:block'>{text}</p>
         </div>
   )
 };

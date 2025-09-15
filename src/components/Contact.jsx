@@ -1,8 +1,8 @@
-import React from 'react'
+// import React from 'react'
 import EmailCard from './EmailCard'
 import useScrollReveal from '../hooks/scrollReveal';
 import {motion, scale} from 'motion/react'
-import EmailSent from './EmailSent';
+// import EmailSent from './EmailSent';
 import { useSelector } from 'react-redux';
 function Contact() {
     const theme = useSelector(state => state.theme.theme);

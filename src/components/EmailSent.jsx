@@ -1,7 +1,7 @@
 import React from 'react'
 
 import {motion, AnimatePresence} from 'motion/react'
-import { div } from 'motion/react-client';
+// import { div } from 'motion/react-client';
 import { useSelector } from 'react-redux';
 function EmailSent({show}) {
   const theme = useSelector(state => state.theme.theme);

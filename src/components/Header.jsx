@@ -2,8 +2,8 @@ import React, {useRef} from 'react'
 import {motion, useMotionTemplate, useScroll, useTransform} from 'motion/react'
 import '../../src/App.css'
 import great from '../images/great.jpg'
-import myphotoback from '../images/myphotoback.jpeg'
-import tech from '../images/tech.jpeg'
+
+
 import myphoto2 from '../images/myphoto2.jpeg'
 
 

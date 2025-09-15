@@ -19,9 +19,9 @@ function Nav() {
             </ul>
         </div>
         <div className='flex lg:gap-2 gap-0.5 items-center justify-center'>
-            {/* <div>
+            <div>
                 <ThemeToggle />
-            </div> */}
+            </div>
             <div id="nav_right" className='flex flex-row-reverse justify-between content-center'>
             <a href="#contact" id='arrowUsed' className='dark:text-[#a34ce4]'>Contact
                 <span class="material-symbols-outlined flex items-center content-center"> arrow_right_alt</span>
