@@ -38,7 +38,7 @@ const About = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="grid-container  border border-black-300 dark:bg-[#161616] bg-[#eaefee] rounded-lg sm:p-7 p-4 flex flex-col gap-5 h-full">
+          <div className="grid-container  border border-black-300 dark:bg-[#161616] bg-[#f6f6f8] rounded-lg sm:p-7 p-4 flex flex-col gap-5 h-full">
             <img src={programming} alt="grid-1" className="rounded-3xl" />
 
             <div>
@@ -61,7 +61,7 @@ const About = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] bg-[#eaefee] rounded-lg  p-4 flex flex-col gap-5">
+          <div className="grid-container w-full h-full border border-black-300 dark:bg-[#161616] bg-[#f6f6f8] rounded-lg  p-4 flex flex-col gap-5">
             <img src={coding} alt="grid-2" className="rounded-3xl object-contain"/>
 
             <div>
@@ -89,7 +89,7 @@ const About = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="[content-visibility:auto] [contain:layout_style] grid-container w-full h-full border border-black-300 dark:bg-[#161616] bg-[#eaefee] rounded-lg sm:p-7 p-4 flex flex-col gap-5 justify-center">
+          <div className="[content-visibility:auto] [contain:layout_style] grid-container w-full h-full border border-black-300 dark:bg-[#161616] bg-[#f6f6f8] rounded-lg sm:p-7 p-4 flex flex-col gap-5 justify-center">
             <div className="rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center -mt-5">
               {/* <Globe
                 height={326}
@@ -120,10 +120,10 @@ const About = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="grid-container w-full h-full border border-black-300 bg-[#eaefee] dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col justify-center gap-5">
+          <div className="grid-container w-full h-full border border-black-300 bg-[#f6f6f8]] dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col justify-center gap-5">
             <div className=''>
-                <div className='h-[150px] overflow-y-clip flex  justify-center'>
-                    <img src={education} alt="grid-3" className=" rounded-3xl " />
+                <div className='flex  justify-center items-center'>
+                    <img src={education} alt="grid-3" className="sm:h-[15rem] rounded-3xl" />
                 </div>
             </div>
             <div className='flex flex-col gap-3'>
@@ -150,7 +150,7 @@ const About = () => {
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: false, amount: 0.2 }}
         >
-          <div className="grid-container w-full h-full border border-black-300 bg-[#eaefee] dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
+          <div className="grid-container w-full h-full border border-black-300 bg-[#f6f6f8] dark:bg-[#161616] rounded-lg sm:p-7 p-4 flex flex-col gap-5">
             <img
               src={mail}
               alt="grid-4"
