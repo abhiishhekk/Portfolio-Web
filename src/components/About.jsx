@@ -11,7 +11,7 @@ import Button from './Button'
 import {motion} from 'motion/react'
 import Icon from './Icon';
 import mail from '../assets/mail.png'
-import coding from '../assets/coding.png'
+import coding from '../assets/coding.svg'
 import programming from '../assets/programming.svg'
 import location from '../assets/location.svg'
 import education from '../assets/education.png'
