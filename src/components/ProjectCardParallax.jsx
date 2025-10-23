@@ -74,10 +74,10 @@ function ProjectCardParallax({i, id, title, image, bgCol, link,  description ,pr
                 }}
                 transition={{ type: "spring", stiffness: 250 }}
               >
-                <a href={link} target="_blank" rel="noopener noreferrer" className='arrowUsed border-2 rounded-3xl p-1 pr-3.5 pl-2 self-end flex '>
-                  Take a look...
-                  <span className='material-symbols-outlined flex items-center justify-center'>
-                     arrow_right_alt
+                <a href={link} target="_blank" rel="noopener noreferrer" className='arrowUsed border-2 rounded-3xl pr-3.5 pl-2 self-end flex justify-between'>
+                  Code
+                  <span className='material-symbols-outlined flex items-center justify-center mx-1'>
+                     <svg fill="#000000" width="27px" height="27px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" data-iconid="code-solid" data-svgname="Code solid"><path d="M 18 5 L 12 27 L 14 27 L 20 5 Z M 7.9375 6.40625 L 1.1875 15.40625 L 0.75 16 L 1.1875 16.59375 L 7.9375 25.59375 L 9.5625 24.40625 L 3.25 16 L 9.5625 7.59375 Z M 24.0625 6.40625 L 22.4375 7.59375 L 28.75 16 L 22.4375 24.40625 L 24.0625 25.59375 L 30.8125 16.59375 L 31.25 16 L 30.8125 15.40625 Z"></path></svg>
                   </span>
                 </a>
               </motion.div>
