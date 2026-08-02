@@ -82,8 +82,8 @@ const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
             >
               A B.Tech Computer Science student at NIT Allahabad, actively exploring web development and data structures & algorithms. I enjoy building user-friendly interfaces, optimizing problem-solving skills, and constantly learning new tools and technologies.
             </motion.div>
-            <div id="resume" className='box-content self-end mr-5'>
-              <div id="flex_for_resume" className='box-content mt-6'>
+            <div id="resume" className='box-content self-end mr-5 '>
+              <div id="flex_for_resume" className='box-content mt-6 '>
                 <a href="https://drive.google.com/file/d/1KGGGmJm2F_SxcXQ7dIqx1dfmjxb5VxCz/view?usp=drivesdk">
                   Resume
                   <i
