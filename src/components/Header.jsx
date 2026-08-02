@@ -84,7 +84,7 @@ const zoom = useTransform(scrollYProgress, [0, 1], [1, 1.18]);
             </motion.div>
             <div id="resume" className='box-content'>
               <div id="flex_for_resume" className='box-content mt-6'>
-                <a href="https://drive.google.com/file/d/1JKVU9VQTmsW7S29eG-BAg0qPJje9BrL-/view?usp=sharing">
+                <a href="https://drive.google.com/file/d/1KGGGmJm2F_SxcXQ7dIqx1dfmjxb5VxCz/view?usp=drivesdk">
                   Download my resume
                   <i
                     className="fa-regular fa-file ml-2"

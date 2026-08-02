@@ -144,7 +144,7 @@ function EmailCard() {
               boxShadow:"0px 15px 20px rgba(0, 0, 0, 0.23)",
             }}
             // transition={{ type: "spring", stiffness: 250 }}
-            type='submit' className={`flex items-center justify-center box-content rounded-lg text-xl  cursor-pointer w-[14rem] h-[2.5rem] text-white
+            type='submit' className={`flex items-center justify-center box-content rounded-lg text-xl  cursor-pointer w-[14rem] h-[2.5rem] dark:text-white
                 dark:bg-[#393838]
               `}
             onClick={handleSubmit}
